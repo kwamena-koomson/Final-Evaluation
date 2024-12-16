@@ -1,0 +1,47 @@
+// Define variables for colors and spacing
+$border-color: black;
+$border-radius: 10px;
+$gap: 1rem;
+$max-width: 50%;
+$height: 200vh;
+
+.card-grid {
+  margin: 0 auto;
+  width: 80%;
+}
+
+// Card styles
+.card {
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  flex-direction: column;
+
+  img {
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+// Grid styles for row and column
+.row-grid,
+.col-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;  
+  margin: 1rem;
+}
+
+.col-grid {
+  flex-direction: column;
+  height: $height;  
+  max-width: $max-width;  
+  margin: 0 auto;
+}

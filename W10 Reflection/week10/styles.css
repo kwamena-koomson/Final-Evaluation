@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #223344;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vmin;
+  width: 25vmin;
+  background-color: teal;
+  position: relative;
+}
+
+.orbiting-circle {
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  position: absolute;
+  animation: moveCorners 3s linear infinite;
+}
+
+@keyframes moveCorners {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 75%;
+  }
+  50% {
+    top: 75%;
+    left: 75%;
+  }
+  75% {
+    top: 75%;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+.morphing-circle {
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  animation: morphing-circle-square 3s linear infinite;
+}
+
+@keyframes morphing-circle-square {
+  0%, 25% {
+    border-radius: 50%;
+    background-color: darkred;
+  }
+  50%, 75% {
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(90deg);
+  }
+  100% {
+    border-radius: 50%;
+    background-color: darkred;
+    transform: rotate(90deg);
+  }
+}
+.splitting-circle {
+  position: absolute;
+  height: 50px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50% 0 0 50%;
+  animation: split-animate 3s ease-in-out infinite;
+}
+
+.splitting-left {
+  border-radius: 50% 0 0 50%;
+  left: calc(50% - 25px);
+  animation: split-left 3s ease-in-out infinite;
+}
+
+/* Right Half */
+.splitting-right {
+  border-radius: 0 50% 50% 0;
+  right: calc(50% - 25px);
+  animation: split-right 3s ease-in-out infinite;
+}
+
+@keyframes split-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes split-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+.bouncing-circle {
+  height: 25%;
+  width: 25%;
+  background-color: red;
+  border-radius: 50%;
+  animation: bouncing 2s ease-in-out infinite;
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="cart">
+        <header class="cart__header">
+            <h1 class="cart__title">Your cart</h1>
+            <span class="cart__count">3</span>
+        </header>
+        <div class="cart__items">
+            <div class="cart__item">
+                <div class="cart__item-details">
+                    <h2 class="cart__item-name">Product name</h2>
+                    <p class="cart__item-description">Brief description</p>
+                </div>
+                <span class="cart__item-price">$12</span>
+            </div>
+            <div class="cart__item">
+                <div class="cart__item-details">
+                    <h2 class="cart__item-name">Second product</h2>
+                    <p class="cart__item-description">Brief description</p>
+                </div>
+                <span class="cart__item-price">$8</span>
+            </div>
+            <div class="cart__item">
+                <div class="cart__item-details">
+                    <h2 class="cart__item-name">Third item</h2>
+                    <p class="cart__item-description">Brief description</p>
+                </div>
+                <span class="cart__item-price">$5</span>
+            </div>
+            <div class="cart__item cart__item--promo">
+                <div class="cart__item-details">
+                    <h2 class="cart__item-name cart__item-name--promo">Promo code</h2>
+                    <p class="cart__item-code">EXAMPLECODE</p>
+                </div>
+                <span class="cart__item-price cart__item-price--promo">-$5</span>
+            </div>
+        </div>
+        <footer class="cart__footer">
+            <div class="cart__total">
+                <span class="cart__total-label">Total (USD)</span>
+                <span class="cart__total-price">$20</span>
+            </div>
+            <div class="cart__promo-code">
+                <input type="text" class="cart__promo-input" placeholder="Promo code">
+                <button class="cart__promo-button">Redeem</button>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Import the Lora font for headlines */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+/* Define variables */
+/* General styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+header h1 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2.5em;
+  font-family: "Lora", serif;
+}
+header h1 a:hover {
+  color: #00ddff;
+}
+header h1 a:active {
+  color: #DEB887;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #666;
+  font-family: "Lora", serif;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+article {
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article .post-date {
+  color: #444;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+article .post-content h2 a {
+  text-decoration: none;
+  color: #555;
+  font-family: "Lora", serif; /* headlines font */
+}
+article .post-content figure {
+  margin: 10px 0;
+}
+article .post-content figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+article .post-content p {
+  color: #333;
+  font-size: 1em;
+}
+
+/* Mixin for large screen adjustments */
+/* Small screens */
+@media (max-width: 767px) {
+  header h1 a {
+    font-size: 2.2em;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+  article {
+    text-align: center;
+  }
+  article .post-date {
+    font-size: 1em;
+    color: #000;
+    margin: 20px 0;
+  }
+  article .post-content {
+    padding: 0 10px;
+  }
+  article .post-content img {
+    max-width: 150px;
+  }
+}
+/* Large screens */
+@media (min-width: 768px) {
+  header h1 a {
+    font-size: 3.5em;
+  }
+  nav ul {
+    justify-content: flex-end;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  article {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  article .post-date {
+    width: 15%;
+    font-size: 1.2em;
+    text-align: left;
+    color: #444;
+    margin: 0;
+    padding: 10px 20px 10px 0;
+    border-right: 1px solid #d0d0d0;
+  }
+  article .post-content {
+    width: 85%;
+    padding: 10px 20px;
+  }
+  article .post-content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+  }
+  article .post-content figure {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  article .post-content figure img {
+    max-width: 150px;
+    margin-right: 20px;
+    float: left;
+  }
+  article .post-content p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

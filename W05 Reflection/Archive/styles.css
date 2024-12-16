@@ -1,0 +1,38 @@
+.card-grid {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.card {
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid black;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.card img {
+  flex: 1;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.row-grid,
+.col-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.col-grid {
+  flex-direction: column;
+  height: 200vh;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
